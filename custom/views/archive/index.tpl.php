@@ -30,6 +30,20 @@ header('Content-type: text/html; charset=UTF-8');
 
     <title><?php echo $PlanetConfig->getName(); ?></title>
     <?php include(dirname(__FILE__).'/head.tpl.php'); ?>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32144124-1']);
+      _gaq.push(['_setDomainName', 'kohanabrasil.com.br']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
 </head>
 
 <body>
@@ -47,7 +61,7 @@ header('Content-type: text/html; charset=UTF-8');
             <?php endif; ?>
             <?php if (count($today)): ?>
             <div class="article">
-                <h2>Today</h2>
+                <h2>Hoje</h2>
                 <ul>
                 <?php foreach ($today as $item): ?>
                     <?php $feed = $item->get_feed(); ?>
@@ -62,7 +76,7 @@ header('Content-type: text/html; charset=UTF-8');
             
             <?php if (count($week)): ?>
             <div class="article">
-                <h2>This week</h2>
+                <h2>Esta Semana</h2>
                 <ul>
                 <?php foreach ($week as $item): ?>
                     <?php $feed = $item->get_feed(); ?>
@@ -77,7 +91,7 @@ header('Content-type: text/html; charset=UTF-8');
             
             <?php if (count($month)): ?>
             <div class="article">
-                <h2>This month</h2>
+                <h2>Este Mês</h2>
                 <ul>
                 <?php foreach ($month as $item): ?>
                     <?php $feed = $item->get_feed(); ?>
@@ -92,7 +106,7 @@ header('Content-type: text/html; charset=UTF-8');
             
             <?php if (count($older)): ?>
             <div class="article">
-                <h2>Older items</h2>
+                <h2>Mais antigos</h2>
                 <ul>
                 <?php foreach ($older as $item): ?>
                     <?php $feed = $item->get_feed(); ?>

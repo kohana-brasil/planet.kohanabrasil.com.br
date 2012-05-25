@@ -1,7 +1,7 @@
 html{
     font-family: "Lucida Grande", "Segoe UI", sans-serif;
     color: #111;
-    background: #EEE;
+    background: #CDDA9E url('../img/bg.png') repeat-x;
     font-size: 62.5%;
 }
 
@@ -13,7 +13,7 @@ body{
 }
 
 a{
-    color: #669;
+    color: #578B14;
 }
 
 a:visited{
@@ -52,7 +52,7 @@ h2{
 *******************************************************************************/
 #top {
     color: #FFF;
-    padding: 10px 30px;
+    padding: 0px;
 }
     h1 a,
     h1 a:visited {
@@ -75,6 +75,7 @@ h2{
 #sidebar {
     width: 300px;
     float: left;
+    padding-top:30px;
 }
     #sidebar div {
         padding: 1em 30px;
@@ -86,6 +87,10 @@ h2{
         list-style: none;
         padding: 0;
         margin: 1em 0;
+    }
+    #sidebar a{
+        text-decoration:none;
+        color:#1f3207;
     }
     
 /* Article
